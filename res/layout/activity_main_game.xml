@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background" 
+    >
+
+    <!-- Hearder Bar -->
+    <RelativeLayout 
+        android:id="@+id/hearder_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_header"
+        android:layout_centerHorizontal="true"
+        >
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_centerInParent="true"
+            />
+        
+        <ImageView
+            android:id="@+id/button_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/style_button_refresh"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/empty"
+            android:layout_centerVertical="true"
+            />
+        
+    </RelativeLayout>
+    
+    <ScrollView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hearder_bar"
+        android:scrollbars="none"
+        >
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        >
+	    
+	        <!-- Layout Hide -->
+		    <LinearLayout 
+		        android:id="@+id/linearlayout_unknown"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal"
+		        android:background="@drawable/bg_item"
+		        android:layout_marginLeft="@dimen/margin_left_small"
+		        android:layout_marginTop="@dimen/margin_top_normal"
+		        android:layout_marginRight="@dimen/margin_right_small"
+		        android:gravity="center"
+		        >
+		        
+		        <!-- <ImageView
+		            android:layout_weight="1"
+		            android:layout_width="0dp"
+		            android:layout_height="wrap_content"
+		            android:contentDescription="@string/empty"
+		            android:src="@drawable/ic_unknown"
+		            android:gravity="center"
+		            />
+		        
+		        <ImageView
+		            android:layout_weight="1"
+		            android:layout_width="0dp"
+		            android:layout_height="wrap_content"
+		            android:contentDescription="@string/empty"
+		            android:src="@drawable/ic_unknown"
+		            android:gravity="center"
+		            />
+		        
+		        <ImageView
+		            android:layout_weight="1"
+		            android:layout_width="0dp"
+		            android:layout_height="wrap_content"
+		            android:contentDescription="@string/empty"
+		            android:src="@drawable/ic_unknown"
+		            android:gravity="center"
+		            /> -->
+		        
+		    </LinearLayout>
+		    
+		    <!-- List item -->
+		    <LinearLayout
+		        android:id="@+id/linearlayout_listview"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical"
+		        android:layout_marginLeft="@dimen/margin_left_small"
+		        android:layout_marginTop="@dimen/margin_top_normal"
+		        android:layout_marginRight="@dimen/margin_right_small"
+		        android:layout_marginBottom="@dimen/margin_bottom_small"
+		        >
+		        
+		    </LinearLayout>
+				    
+	    </LinearLayout>
+    </ScrollView>
+    
+</RelativeLayout>
+

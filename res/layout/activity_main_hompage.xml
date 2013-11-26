@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background" 
+    >
+
+    <!-- Hearder Bar -->
+    <RelativeLayout 
+        android:id="@+id/hearder_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_header"
+        android:layout_centerHorizontal="true"
+        >
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_centerInParent="true"
+            />
+        
+    </RelativeLayout>
+    
+    <!-- Layout button level -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/hearder_bar"
+        android:orientation="vertical"
+        android:background="@android:color/transparent"
+        android:layout_marginLeft="@dimen/margin_left_normal"
+        android:layout_marginRight="@dimen/margin_right_normal"
+        android:gravity="center"
+        >
+        
+        <!-- Level easy -->
+        <RelativeLayout 
+            android:id="@+id/relativelayout_button_easy"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/style_button_level"
+            android:clickable="true"
+            android:soundEffectsEnabled="true"
+            android:gravity="center"
+            android:visibility="visible"
+            >
+            
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_button_easy"
+                android:contentDescription="@string/empty"
+                android:layout_centerInParent="true"
+                />
+            
+        </RelativeLayout>
+        
+        <!-- Level medium -->
+        <RelativeLayout 
+            android:id="@+id/relativelayout_button_medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/style_button_level"
+            android:layout_marginTop="@dimen/margin_top_large"
+            android:clickable="true"
+            android:soundEffectsEnabled="true"
+            android:gravity="center"
+            android:visibility="visible"
+            >
+            
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_button_medium"
+                android:contentDescription="@string/empty"
+                android:layout_centerInParent="true"
+                />
+            
+        </RelativeLayout>
+        
+        <!-- Level hard -->
+        <RelativeLayout 
+            android:id="@+id/relativelayout_button_hard"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/style_button_level"
+            android:layout_marginTop="@dimen/margin_top_large"
+            android:clickable="true"
+            android:soundEffectsEnabled="true"
+            android:gravity="center"
+            android:visibility="visible"
+            >
+            
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_button_hard"
+                android:contentDescription="@string/empty"
+                android:layout_centerInParent="true"
+                />
+            
+        </RelativeLayout>
+        
+        
+    </LinearLayout>
+    
+</RelativeLayout>
