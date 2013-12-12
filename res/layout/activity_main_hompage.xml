@@ -24,6 +24,19 @@
             android:layout_centerInParent="true"
             />
         
+        <ImageView
+            android:id="@+id/imageview_button_about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/style_button_about"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/empty"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_right_tiny"
+            android:clickable="true"
+            android:soundEffectsEnabled="true"
+            />
+        
     </RelativeLayout>
     
     <!-- Layout button level -->
@@ -38,74 +51,42 @@
         android:gravity="center"
         >
         
-        <!-- Level easy -->
-        <RelativeLayout 
-            android:id="@+id/relativelayout_button_easy"
-            android:layout_width="fill_parent"
+        <!-- Level hard -->
+        <ImageView
+            android:id="@+id/imageview_button_hard"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/style_button_level"
-            android:clickable="true"
+            android:src="@drawable/style_button_level_hard"
+            android:contentDescription="@string/empty"
+            android:layout_gravity="center"
             android:soundEffectsEnabled="true"
-            android:gravity="center"
-            android:visibility="visible"
-            >
+            android:clickable="true"
+            />
             
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_button_easy"
-                android:contentDescription="@string/empty"
-                android:layout_centerInParent="true"
-                />
-            
-        </RelativeLayout>
         
         <!-- Level medium -->
-        <RelativeLayout 
-            android:id="@+id/relativelayout_button_medium"
-            android:layout_width="fill_parent"
+        <ImageView
+            android:id="@+id/imageview_button_medium"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/style_button_level"
-            android:layout_marginTop="@dimen/margin_top_large"
-            android:clickable="true"
+            android:src="@drawable/style_button_level_medium"
+            android:contentDescription="@string/empty"
+            android:layout_gravity="center"
             android:soundEffectsEnabled="true"
-            android:gravity="center"
-            android:visibility="visible"
-            >
-            
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_button_medium"
-                android:contentDescription="@string/empty"
-                android:layout_centerInParent="true"
-                />
-            
-        </RelativeLayout>
+            android:clickable="true"
+            />
         
-        <!-- Level hard -->
-        <RelativeLayout 
-            android:id="@+id/relativelayout_button_hard"
-            android:layout_width="fill_parent"
+        <!-- Level easy -->
+        <ImageView
+            android:id="@+id/imageview_button_easy"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/style_button_level"
-            android:layout_marginTop="@dimen/margin_top_large"
-            android:clickable="true"
+            android:src="@drawable/style_button_level_easy"
+            android:contentDescription="@string/empty"
+            android:layout_gravity="center"
             android:soundEffectsEnabled="true"
-            android:gravity="center"
-            android:visibility="visible"
-            >
-            
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_button_hard"
-                android:contentDescription="@string/empty"
-                android:layout_centerInParent="true"
-                />
-            
-        </RelativeLayout>
-        
+            android:clickable="true"
+            />
         
     </LinearLayout>
     

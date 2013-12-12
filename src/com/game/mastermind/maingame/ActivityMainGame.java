@@ -170,7 +170,7 @@ public class ActivityMainGame extends Activity {
 				params.weight 	= 1;
 				params.width 	= 0;
 				params.height 	= LayoutParams.WRAP_CONTENT;
-				imageview_ball.setImageResource(R.drawable.ball_unknown);
+				imageview_ball.setImageResource(R.drawable.ball_unknown/*array_ball_unknown[p]*/);
 				imageview_ball.setLayoutParams(params);
 				linearlayout_unknown.addView(imageview_ball);
 				
@@ -297,7 +297,8 @@ public class ActivityMainGame extends Activity {
 									
 									//	TODO
 									
-								}else{
+								}
+								else{
 									
 									CommonFunction.setEnable(item_holders, current_position, false);
 									
@@ -311,25 +312,6 @@ public class ActivityMainGame extends Activity {
 									holder.textview_go_item.setVisibility(View.GONE);
 									
 									int array_ball_hint[] = CommonFunction.getArrayBallHint(number_slot, array_ball_unknown, array_ball_holder_pick);
-									
-									if(CommonFunction.compare2Array(array_ball_unknown, array_ball_holder_pick)){
-										CommonFunction.dialogMessage(ActivityMainGame.this, "", "You wind !");
-										
-										linearlayout_unknown.removeAllViews();
-										
-										for(int i=0; i<array_ball_unknown.length; i++){
-											
-											ImageView imageview_ball = new ImageView(ActivityMainGame.this);
-											LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-											params.weight 	= 1;
-											params.width 	= 0;
-											params.height 	= LayoutParams.WRAP_CONTENT;
-											imageview_ball.setImageResource(array_ball_unknown[i]);
-											imageview_ball.setLayoutParams(params);
-											linearlayout_unknown.addView(imageview_ball);
-										}
-										
-									}
 									
 									int p=0;
 									int old_p = -1;
@@ -361,10 +343,57 @@ public class ActivityMainGame extends Activity {
 									
 									array_ball_hint = new int[number_slot];
 									holder.layout_hint.setEnabled(false);
+									
+									//
+									//	Check win or lost
+									//
+									if(CommonFunction.compare2Array(array_ball_unknown, array_ball_holder_pick)){
+										CommonFunction.dialogMessage(ActivityMainGame.this, "", "You wind !");
+										
+										if(current_position == 0){
+											CommonFunction.setEnable(item_holders, current_position, false);
+										}
+										else{
+											CommonFunction.setEnable(item_holders, current_position-1, false);
+										}
+										
+										linearlayout_unknown.removeAllViews();
+										
+										for(int i=0; i<array_ball_unknown.length; i++){
+											
+											ImageView imageview_ball = new ImageView(ActivityMainGame.this);
+											LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+											params.weight 	= 1;
+											params.width 	= 0;
+											params.height 	= LayoutParams.WRAP_CONTENT;
+											imageview_ball.setImageResource(array_ball_unknown[i]);
+											imageview_ball.setLayoutParams(params);
+											linearlayout_unknown.addView(imageview_ball);
+										}
+									}
+									else if(current_position == 0){
+										
+										CommonFunction.dialogMessage(ActivityMainGame.this, "", "You lost :(");
+										
+										CommonFunction.setEnable(item_holders, current_position, false);
+										
+										linearlayout_unknown.removeAllViews();
+										
+										for(int i=0; i<array_ball_unknown.length; i++){
+											
+											ImageView imageview_ball = new ImageView(ActivityMainGame.this);
+											LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+											params.weight 	= 1;
+											params.width 	= 0;
+											params.height 	= LayoutParams.WRAP_CONTENT;
+											imageview_ball.setImageResource(array_ball_unknown[i]);
+											imageview_ball.setLayoutParams(params);
+											linearlayout_unknown.addView(imageview_ball);
+										}
+										
+									}
+									
 								}
-								
-								
-								
 							}
 						}
 					});

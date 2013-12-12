@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Maseter Mind</string>
+    <string name="app_name">Master Mind</string>
     <string name="empty"></string>
     <string name="go">Go</string>
     <string name="ok">Ok</string>
-
+	<string name="about">Company: Innoria Solution\nDev-Des: Huynh Xinh\nCopyright &#169; Innoria Solution 2013</string>
 </resources>

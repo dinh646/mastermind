@@ -15,6 +15,6 @@ public class CommonValue {
 	public static int NUMBER_ITEM_HARD	 	= 13;
 	
 	//	Number allow EXIST
-	public static int NUMBER_BALL_ALLOW_EXIST	= 1;
+	public static int NUMBER_BALL_ALLOW_EXIST	= 2;
 	
 }

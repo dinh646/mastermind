@@ -7,10 +7,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.game.mastermind.R;
 import com.game.mastermind.maingame.ActivityMainGame;
+import com.game.mastermind.util.CommonFunction;
+import com.game.mastermind.util.CommonMessage;
 import com.game.mastermind.util.CommonValue;
 
 public class ActivityHomePage extends Activity {
@@ -30,10 +33,20 @@ public class ActivityHomePage extends Activity {
 		//
 		//	Get controls
 		//
-		final RelativeLayout button_easy = (RelativeLayout) findViewById(R.id.relativelayout_button_easy);
-		final RelativeLayout button_medium = (RelativeLayout) findViewById(R.id.relativelayout_button_medium);
-		final RelativeLayout button_hard = (RelativeLayout) findViewById(R.id.relativelayout_button_hard);
+		final ImageView button_about = (ImageView) findViewById(R.id.imageview_button_about);
+		final ImageView button_easy = (ImageView) findViewById(R.id.imageview_button_easy);
+		final ImageView button_medium = (ImageView) findViewById(R.id.imageview_button_medium);
+		final ImageView button_hard = (ImageView) findViewById(R.id.imageview_button_hard);
 		
+		//	Button about
+		button_about.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				
+				CommonFunction.dialogMessage(ActivityHomePage.this, CommonMessage.APP_NAME, getResources().getString(R.string.about));
+				
+			}
+		});
 		
 		//	Button easy
 		button_easy.setOnClickListener( new OnClickListener() {
